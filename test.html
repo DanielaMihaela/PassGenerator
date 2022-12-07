@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+body {
+  background: linear-gradient(
+    to right,
+    #6f7280,
+    #2a2c3c,
+    #181827,
+    #833ab4,
+    #fd1d1d,
+    #fcb045
+  );
+  background-size: 400% 400%;
+  animation: body 10s infinite ease-in-out;
+}
+
+
+@keyframes body {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+.heart {
+  height: 200px;
+  width: 200px;
+  background-color: #f4959b;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: rotate(-45deg);
+  animation-name: beat;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+}
+
+.heart::after {
+  content: "";
+  height: 200px;
+  width: 200px;
+  background-color: #f4959b;
+  border-radius: 50%;
+  position: absolute;
+  top: 0px;
+  left: 100px;
+}
+
+.heart::before {
+  content: "";
+  height: 200px;
+  width: 200px;
+  background-color: #f4959b;
+  border-radius: 50%;
+  position: absolute;
+  top: -100px;
+  left: 0px;
+}
+
+@keyframes beat {
+  0% {
+    transform: scale(1) rotate(-45deg);
+  }
+  50% {
+    transform: scale(0.5) rotate(-45deg);
+  }
+}
+    </style>
+     <div class="heart" style="position:relative">
+       <div style="position:absolute;font-size:50px;font-weight:bold;"> MIKY</div>  
+     </div>
+     <form action="/savemythings" method="post">
+
+        <input type="text">
+        <input type="password">
+   
+        <select name="test" id="">
+           <option value="">1</option>
+           <option value="">2</option>
+           <option value="">3</option>
+           <option value="">4</option>
+        </select>
+        <input type="checkbox" name="" id="">
+     </form>
+
+</body>
+</html>
